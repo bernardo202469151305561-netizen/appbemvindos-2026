@@ -1,1 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Telecom · Fibra Óptica</title>
+    <!-- Bootstrap 5 CSS (ícones incluídos via Bootstrap Icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons - biblioteca oficial de ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Fonte Google (opcional, para dar um toque moderno) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: #f8fafc;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: -0.02em;
+        }
+        .bg-maximum {
+            background: linear-gradient(135deg, #0b1e33 0%, #1a3b5c 100%);
+        }
+        .hero-section {
+            background: linear-gradient(145deg, #0a1c2f 0%, #143750 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        .hero-section h1 {
+            font-weight: 700;
+            font-size: 2.8rem;
+            line-height: 1.2;
+        }
+        .hero-section .highlight {
+            color: #f9c74f;
+        }
+        .icon-card {
+            background: white;
+            border-radius: 2rem;
+            padding: 2rem 1.5rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.02);
+            height: 100%;
+        }
+        .icon-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -8px rgba(0,70,150,0.15);
+            border-color: #cde1f5;
+        }
+        .icon-card i {
+            font-size: 2.8rem;
+            color: #1e4a76;
+            margin-bottom: 1.2rem;
+        }
+        .icon-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #0b2b40;
+        }
+        .card-plan {
+            border-radius: 2rem;
+            border: none;
+            box-shadow: 0 20px 35px -8px rgba(0,30,60,0.1);
+            transition: 0.2s;
+            overflow: hidden;
+        }
+        .card-plan:hover {
+            box-shadow: 0 25px 45px -8px #1a3b5c4d;
+        }
+        .plan-popular {
+            border: 2px solid #f9c74f;
+        }
+        .btn-maximum {
+            background-color: #f9c74f;
+            color: #0b1e33;
+            font-weight: 600;
+            padding: 0.7rem 2rem;
+            border-radius: 60px;
+            border: none;
+        }
+        .btn-maximum:hover {
+            background-color: #f2b83e;
+            color: #0b1e33;
+        }
+        .btn-outline-maximum {
+            border: 2px solid #1e4a76;
+            color: #1e4a76;
+            font-weight: 600;
+            border-radius: 60px;
+            padding: 0.6rem 1.8rem;
+        }
+        .btn-outline-maximum:hover {
+            background-color: #1e4a76;
+            color: white;
+        }
+        .section-title {
+            font-weight: 700;
+            color: #0b1e33;
+            margin-bottom: 0.5rem;
+        }
+        .section-sub {
+            color: #4a5f73;
+            font-weight: 400;
+        }
+        .contact-info {
+            background: white;
+            border-radius: 2.5rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 25px 40px -14px #102a4033;
+        }
+        .contact-info i {
+            color: #1e4a76;
+            margin-right: 0.8rem;
+            font-size: 1.4rem;
+            vertical-align: middle;
+        }
+        .footer-max {
+            background-color: #0a1c2a;
+            color: #b0c7db;
+            padding: 2rem 0;
+            border-top: 1px solid #203e54;
+        }
+        .address-block {
+            background: #e9f2fa;
+            padding: 0.9rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 500;
+            color: #0d3552;
+            display: inline-block;
+        }
+        .cnpj-badge {
+            font-size: 0.9rem;
+            background: #d4e3f0;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            color: #0d3552;
+        }
+    </style>
+</head>
+<body>
 
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-maximum py-3" data-bs-theme="dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-wifi" style="font-size: 2rem; vertical-align: middle;"></i> 
+            Maximum Telecom
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- SEÇÃO HERO (com dados cadastrais em destaque) -->
+<section class="hero-section" id="home">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill">
+                    <i class="bi bi-check-circle-fill me-1"></i> Situação cadastral: ATIVA · 04/01/2022
+                </span>
+                <h1 class="display-4 fw-bold">Conectividade com <span class="highlight">fibra óptica</span> que aproxima você do mundo</h1>
+                <p class="lead fs-5 mt-4 text-light opacity-75">Máxima velocidade, estabilidade e suporte humanizado. A Maximum Telecom leva internet de verdade para o Rio de Janeiro.</p>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="#planos" class="btn btn-maximum btn-lg rounded-pill px-5 py-3 shadow"><i class="bi bi-stars me-2"></i>Ver planos</a>
+                    <a href="#contato" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3"><i class="bi bi-whatsapp me-2"></i>(21) 98560-2739</a>
+                </div>
+                <!-- CNPJ e endereço rápido (chamativo) -->
+                <div class="mt-5 d-flex flex-wrap align-items-center">
+                    <span class="cnpj-badge me-3 mb-2"><i class="bi bi-building"></i> CNPJ 44.728.953/0001-46</span>
+                    <span class="address-block mb-2"><i class="bi bi-pin-map-fill me-1"></i> Rua Dos Caquizeiros, 365 - Cosmos, RJ</span>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <!-- imagem ilustrativa / ícone de rede -->
+                <i class="bi bi-hdd-stack-fill" style="font-size: 12rem; color: rgba(255,255,255,0.15);"></i>
+                <!-- ou uma imagem SVG mais elaborada; optei por ícone grande -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO DE DIFERENCIAIS (ícones + frases) -->
+<section class="py-5">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="badge bg-maximum text-white px-4 py-2 rounded-pill mb-2">diferenciais</span>
+            <h2 class="section-title display-6 fw-bold">Por que escolher a Maximum Telecom?</h2>
+            <p class="section-sub lead">tecnologia de ponta e suporte que funciona</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="icon-card text-center">
+                    <i class="bi bi-trophy-fill"></i>
+                    <h3>+2 anos de estrada</h3>
+                    <p class="text-secondary">Desde 2022 entregando internet de qualidade no Rio de Janeiro, com cadastro ativo e regular.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-card text-center">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                    <h3>Fibra óptica 100%</h3>
+                    <p class="text-secondary">Tecnologia FTTH (fibra até sua casa) com baixa latência e alta disponibilidade.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-card text-center">
+                    <i class="bi bi-headset"></i>
+                    <h3>Suporte humanizado</h3>
+                    <p class="text-secondary">Atendimento rápido via WhatsApp e suporte técnico local. <strong>(21) 98560-2739</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO PLANOS (cards com ícones e informações) -->
+<section class="py-5 bg-white" id="planos">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <h2 class="section-title display-6 fw-bold">Planos sob medida</h2>
+            <p class="section-sub lead">escolha o melhor para sua casa ou negócio</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <!-- plano 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-plan h-100 p-4">
+                    <div class="card-body text-center">
+                        <i class="bi bi-wifi" style="font-size: 3rem; color: #1e4a76;"></i>
+                        <h3 class="fw-bold mt-3">300 Mega</h3>
+                        <p class="text-muted">perfeito para navegação e streaming</p>
+                        <span class="display-5 fw-bold">R$ 89,90</span><span class="text-secondary">/mês</span>
+                        <hr class="my-4">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Wi-Fi 6 incluso</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Suporte prioritário</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Instalação sem fidelidade</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-maximum w-100 mt-3 rounded-pill">Contratar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- plano 2 (destaque POPULAR) -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-plan plan-popular h-100 p-4 shadow">
+                    <div class="card-body text-center">
+                        <span class="badge bg-warning text-dark mb-3 rounded-pill px-4 py-2">⭐ mais contratado</span>
+                        <i class="bi bi-rocket-takeoff-fill" style="font-size: 3rem; color: #c97d10;"></i>
+                        <h3 class="fw-bold mt-3">500 Mega</h3>
+                        <p class="text-muted">ideal para famílias e home office</p>
+                        <span class="display-5 fw-bold">R$ 119,90</span><span class="text-secondary">/mês</span>
+                        <hr class="my-4">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Upload simétrico</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Instalação grátis</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>3 roteadores mesh inclusos</li>
+                        </ul>
+                        <a href="#" class="btn btn-maximum w-100 mt-3 rounded-pill">Quero esse</a>
+                    </div>
+                </div>
+            </div>
+            <!-- plano 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card card-plan h-100 p-4">
+                    <div class="card-body text-center">
+                        <i class="bi bi-gem" style="font-size: 3rem; color: #1e4a76;"></i>
+                        <h3 class="fw-bold mt-3">1 Giga</h3>
+                        <p class="text-muted">ultra velocidade para gamers e empresas</p>
+                        <span class="display-5 fw-bold">R$ 199,90</span><span class="text-secondary">/mês</span>
+                        <hr class="my-4">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>IP fixo incluso</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Suporte 24h</li>
+                            <li class="mb-2"><i class="bi bi-check-lg text-success me-2"></i>Garantia de velocidade</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-maximum w-100 mt-3 rounded-pill">Contratar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-secondary mt-5">* planos para pessoa física. Consulte condições comerciais via WhatsApp.</p>
+    </div>
+</section>
+
+<!-- SEÇÃO INFORMAÇÕES DA EMPRESA (dados reais da Maximum) -->
+<section class="py-5" id="sobre">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+                <h2 class="section-title display-6 fw-bold">A Maximum Telecom</h2>
+                <p class="text-secondary fs-5 mt-3">Provedor de internet com sede no Cosmos, Zona Oeste do Rio, comprometido com inclusão digital e qualidade de conexão.</p>
+                <div class="contact-info mt-4">
+                    <p class="mb-3"><i class="bi bi-calendar-check"></i><strong>Situação cadastral:</strong> Ativa desde 04/01/2022</p>
+                    <p class="mb-3"><i class="bi bi-qr-code"></i><strong>CNPJ:</strong> 44.728.953/0001-46</p>
+                    <p class="mb-3"><i class="bi bi-bank"></i><strong>Razão Social:</strong> Maximum Telecomunicacoes do Brasil LTDA</p>
+                    <p class="mb-3"><i class="bi bi-signpost"></i><strong>Endereço:</strong> Rua Dos Caquizeiros, 365 · Bairro Cosmos</p>
+                    <p class="mb-3"><i class="bi bi-geo-alt-fill"></i><strong>CEP:</strong> 23056-070 · Rio de Janeiro - RJ</p>
+                    <p class="mb-0"><i class="bi bi-telephone-fill"></i><strong>WhatsApp:</strong> (21) 98560-2739</p>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="border rounded-4 p-4 bg-white">
+                            <i class="bi bi-shield-check fs-1 text-primary"></i>
+                            <h4 class="mt-3">Confiança</h4>
+                            <p class="text-secondary">Empresa regularizada e comprometida com a Anatel.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="border rounded-4 p-4 bg-white">
+                            <i class="bi bi-people-fill fs-1 text-primary"></i>
+                            <h4 class="mt-3">Comunidade</h4>
+                            <p class="text-secondary">Fazemos parte do bairro Cosmos e região.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="border rounded-4 p-4 bg-white">
+                            <i class="bi bi-truck fs-1 text-primary"></i>
+                            <h4 class="mt-3">Instalação rápida</h4>
+                            <p class="text-secondary">Técnicos locais, agendamento flexível.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="border rounded-4 p-4 bg-white">
+                            <i class="bi bi-chat-dots-fill fs-1 text-primary"></i>
+                            <h4 class="mt-3">Pré-vendas</h4>
+                            <p class="text-secondary">Tire dúvidas diretamente no (21) 98560-2739</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO CONTATO COM MAPA ESTILIZADO E FRASES -->
+<section class="py-5 bg-white" id="contato">
+    <div class="container py-3">
+        <div class="text-center mb-5">
+            <span class="badge bg-maximum text-white px-4 py-2 rounded-pill">fale com a gente</span>
+            <h2 class="section-title display-6 fw-bold mt-2">Estamos no Rio de Janeiro</h2>
+            <p class="section-sub lead">atendimento rápido e próximo de você</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-info text-center p-5">
+                    <i class="bi bi-whatsapp display-3" style="color:#25D366;"></i>
+                    <h3 class="mt-3 fw-bold">WhatsApp comercial</h3>
+                    <p class="fs-2 fw-semibold text-primary">(21) 98560-2739</p>
+                    <p class="text-secondary">Clique e fale agora mesmo com um de nossos especialistas.</p>
+                    <a href="https://wa.me/5521985602739" target="_blank" class="btn btn-maximum btn-lg rounded-pill px-5 mt-3"><i class="bi bi-chat-dots-fill me-2"></i>Enviar mensagem</a>
+                    
+                    <hr class="my-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <i class="bi bi-envelope-paper fs-3"></i>
+                            <p class="mb-0"><strong>E-mail</strong><br>contato@maximumtelecom.com.br</p>
+                        </div>
+                        <div class="col-md-6">
+                            <i class="bi bi-clock-history fs-3"></i>
+                            <p class="mb-0"><strong>Atendimento</strong><br>Seg a Sex 8h–20h · Sáb 9h–16h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER com CNPJ, endereço e ícones -->
+<footer class="footer-max">
+    <div class="container">
+        <div class="row gy-4 align-items-center">
+            <div class="col-md-5">
+                <h4 class="fw-bold text-white"><i class="bi bi-wifi"></i> Maximum Telecom</h4>
+                <p class="mt-2 small">Fibra óptica com máxima qualidade no Rio de Janeiro.</p>
+                <p class="small"><i class="bi bi-building"></i> 44.728.953/0001-46 · Maximum Telecomunicacoes do Brasil LTDA</p>
+            </div>
+            <div class="col-md-4">
+                <p class="mb-1"><i class="bi bi-pin-map"></i> Rua Dos Caquizeiros, 365 · Cosmos</p>
+                <p class="mb-1"><i class="bi bi-geo-alt"></i> Rio de Janeiro - RJ · CEP 23056-070</p>
+                <p class="mb-0"><i class="bi bi-telephone"></i> (21) 98560-2739</p>
+            </div>
+            <div class="col-md-3 text-md-end">
+                <span class="badge bg-light text-dark p-2 rounded-pill">Situação cadastral: 04/01/2022</span>
+                <div class="mt-3">
+                    <i class="bi bi-facebook me-3 fs-5"></i>
+                    <i class="bi bi-instagram me-3 fs-5"></i>
+                    <i class="bi bi-whatsapp fs-5"></i>
+                </div>
+            </div>
+        </div>
+        <hr class="border-secondary mt-4">
+        <div class="text-center small">© 2025 Maximum Telecom — Todos os direitos reservados. Desenvolvido com <i class="bi bi-heart-fill text-danger"></i> para conectar pessoas.</div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS (necessário para navbar toggle e interações) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
